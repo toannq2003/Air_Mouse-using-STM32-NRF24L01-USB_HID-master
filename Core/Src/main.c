@@ -83,9 +83,9 @@ void convert_Data(void)
     YPos = map(gyro_raw[0], -32768, 32767, -127, 127);
 		HAL_Delay(1);// Adjust the delay as needed
 
-		if ((XPos > 10) || (XPos <-10))
+		if ((XPos > 3) || (XPos <-3))
 		{
-		 mousehid[1] = (XPos/5);
+		 mousehid[1] = XPos;
 
 		}
 
@@ -94,9 +94,9 @@ void convert_Data(void)
 		HAL_Delay(1);// Adjust the delay as needed
 
 		}
-		if ((YPos > 10) || (YPos <-10))
+		if ((YPos > 3) || (YPos <-3))
 		{
-		 mousehid[2]= (YPos)/5;
+		 mousehid[2]= YPos;
 
 		}
 
